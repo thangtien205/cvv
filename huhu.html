@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng sv cá nhân</title>
+</head>
+<style>
+    h1{
+        margin-left: 40px;
+        font-family: 'Lobster', sans-serif;
+    }
+    .thongtincanhan{
+        left: 15px;
+        display: block;
+        color: #000;
+        width: 640px;
+      height: auto;
+        padding-left: 1%;
+        overflow: hidden; 
+         box-sizing: border-box;
+position: relative;
+
+    }
+    .thongtincanhan li{
+        font-weight:bold;
+    }
+    .thongtincanhan ::before{
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        content: '';
+        background-color: #1EBCAD;
+        transform: skewx( 4deg);
+   transform-origin: right bottom;
+        position: absolute;
+        z-index: -1  ;
+        
+    }
+    body{font-family: 'Roboto Mono';
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+    .thongtincv{
+        
+        position: relative;
+        right: 15px;
+        overflow: hidden;
+        display: block; 
+        width: 100%;
+        padding: 30px 70px;
+        box-sizing: border-box;
+        
+    }
+    .thongtincv p{
+     
+        color: antiquewhite;
+    }
+    .thongtincv ::before{
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        content: '';
+        transform: skewX(4deg);
+        transform-origin: top ;
+        background-color: #1C273B;
+        position: absolute;
+        z-index: -1 ;
+    }
+    .thongtincv li{
+        color: antiquewhite;
+    }
+    .ttcn{  background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        width: 300px;
+        border: solid #1C273B;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Thêm bóng */
+        padding: 10px;
+    }
+    .ttcnn{
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        width: 300px;
+        border: solid #1C273B;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Thêm bóng */
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .ttcnn p{
+        font-weight: bold;
+    }
+    .ttcv{}
+</style>
+<body>
+    <div class="thongtincanhan">
+        <img src="data:image/png;base64,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"; style="border-radius: 80px; width: 150px;">
+       
+            <h1>Nguyễn Tiến Thắng</h1>
+            <p><b>Thông tin cá nhân : </b></p>
+        <div class="ttcnn">
+        <li>Sinh viên Khoa: Quản trị kinh doanh</li>
+        <li>Chuyên ngành: Thương Mại Điện Tử</li>
+    </div>
+    <p><b>Thông tin liên hệ: </b></p>
+            <div class="ttcn">
+        <li>Số điện thoại: 0363075719 </li>
+        <li>Ngày sinh: 22/05/2003</li>
+        <li>Địa chỉ: Hà Nội</li>
+        <li>Email:thangdepzai@gmail.com</li>
+    </div>
+    
+     
+    
+        <p><b>Ngôn ngữ: </b></p>
+        <div class="ttcn">
+        <li>Tiếng anh</li>
+        <li>Tiếng nhật</li>
+        </div>
+        
+    
+    </div>
+    <div class="thongtincv"display: block; width: 75vw;padding: 10px 50px;box-sizing: border-box;">
+        
+        <p style="border-bottom: 2px solid;"><b>MỤC TIÊU NGHỀ NGHIỆP</b></p>
+        <div class="ttcv">
+
+        
+        <p>Xin chào nhà Tuyển dụng!</p>
+        <p>Tôi là một sinh viên chưa có nhiều kinh nghiệm nhưng tôi tự tin răng sự sáng tạo, tận tâm và khả năng học nhanh của mình sẽ làm tăng giá trị cho đội ngũ của công ty. Mong muốn được đóng góp công phần vào sự phát triển của tổ chức và học hỏi từ môi trường làm việc chuyên nghiệp, tôi mong có cơ hội được trở thành một thành viên tích cực và đóng góp cho sự thành công chung.</p>
+        <p>Xin cảm ơn</p>
+    </div>
+        <p style="border-bottom: 2px solid;"><b>Kinh nghiệm làm việc</b></p>
+        <p>Trong quá trình học tập, tôi đã tích lũy được một số kinh nghiệm làm việc thông qua các dự án và hoạt động ngoại khóa</p>
+        
+        <p style="border-bottom: 2px solid;"><b>Học vấn</b></p>
+        <p>Sinh viên năm 3 trường Đại Học Mỏ - Địa Chất</p>
+
+        <p style="border-bottom: 2px solid;"><b>Sở thích</b></p>
+        <li>Đọc sách</li>
+        <li>Nghe nhạc</li>
+        <li>Du lịch </li>
+        <p border-bottom: 2px solid;"><b>Kỹ năng mềm</b></p>
+        <li>Quản lý thời gian</li>
+        <li>Giải quyết vấn đề</li>
+        <li>Làm việc nhóm</li>
+        <p border-bottom: 2px solid;"><b>Kỹ năng</b></p>
+        <li>Quản lý điều hành</li>
+    </div>
+</body>
+</html>
